@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import { AmbientBackground } from "@/components/AmbientBackground";
+import { BackgroundShaders } from "../../bg/components/ui/background-shaders";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LanguageProvider } from "@/lib/i18n";
@@ -115,14 +115,15 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
-        <AmbientBackground />
-        <div className="relative flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1 pt-24">
-            <Outlet />
-          </main>
-          <Footer />
-        </div>
+        <BackgroundShaders>
+          <div className="relative flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1 pt-24">
+              <Outlet />
+            </main>
+            <Footer />
+          </div>
+        </BackgroundShaders>
       </LanguageProvider>
     </QueryClientProvider>
   );
