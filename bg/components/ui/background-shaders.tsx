@@ -26,7 +26,7 @@ function cn(...classes: Array<string | undefined | false>) {
 
 export function BackgroundShaders({
   children,
-  colors: colorsProp = colors,
+  colors = defaultColors,
   speed = 1,
   distortion = 0.25,
   swirl = 0.8,
