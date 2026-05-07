@@ -4,10 +4,10 @@ import type { ReactNode } from "react";
 import { Warp } from "@paper-design/shaders-react";
 
 const colors = [
-  "hsl(210, 35%, 18%)", // deep slate
-  "hsl(215, 45%, 28%)", // muted steel blue
-  "hsl(220, 30%, 42%)", // fog blue
-  "hsl(210, 20%, 65%)", // soft silver blue
+  "hsl(220, 10%, 10%)",
+  "hsl(220, 12%, 18%)",
+  "hsl(220, 14%, 28%)",
+  "hsl(210, 18%, 82%)",
 ];
 
 type BackgroundShadersProps = {
