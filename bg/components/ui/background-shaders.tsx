@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { Warp } from "@paper-design/shaders-react";
 
-const colors = [
+const defaultColors = [
   "hsl(220, 10%, 10%)",
   "hsl(220, 12%, 18%)",
   "hsl(220, 14%, 28%)",
