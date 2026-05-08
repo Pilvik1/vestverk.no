@@ -22,10 +22,12 @@ function ContactPage() {
         <h1 className="font-display text-5xl text-foreground sm:text-6xl">
           {t("contact.title")}
         </h1>
-        <p className="mt-6 text-base text-foreground/70">{t("contact.body")}</p>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/75">
+          {t("contact.body")}
+        </p>
         <a
           href="mailto:hakon@vestverk.no"
-          className="mt-8 inline-block font-display text-3xl text-foreground transition-opacity hover:opacity-80 sm:text-4xl"
+          className="mt-10 inline-block font-display text-3xl text-foreground transition-opacity hover:opacity-80 sm:text-4xl"
         >
           hakon@vestverk.no
         </a>

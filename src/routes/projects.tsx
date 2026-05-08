@@ -33,9 +33,14 @@ function ProjectsPage() {
         </p>
       </section>
 
-      <section className="mt-12 grid gap-5 md:grid-cols-2">
+      <section className="mt-12 grid gap-5 md:grid-cols-6">
         {PROJECTS.map((p, i) => (
-          <ProjectCard key={p.name} project={p} index={i} />
+          <div
+            key={p.name}
+            className={p.featured ? "md:col-span-4" : "md:col-span-2"}
+          >
+            <ProjectCard project={p} index={i} />
+          </div>
         ))}
       </section>
     </div>
