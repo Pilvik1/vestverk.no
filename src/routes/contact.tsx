@@ -8,7 +8,10 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — Vestverk" },
       { name: "description", content: "Get in touch with Vestverk by email." },
       { property: "og:title", content: "Contact — Vestverk" },
-      { property: "og:description", content: "Get in touch with Vestverk by email." },
+      {
+        property: "og:description",
+        content: "Get in touch with Vestverk by email.",
+      },
     ],
   }),
   component: ContactPage,

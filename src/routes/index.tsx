@@ -14,10 +14,14 @@ export const Route = createFileRoute("/")({
         content:
           "Vestverk creates and publishes independent digital products. A small builder studio based in Norway.",
       },
-      { property: "og:title", content: "Vestverk — Building focused digital ventures" },
+      {
+        property: "og:title",
+        content: "Vestverk — Building focused digital ventures",
+      },
       {
         property: "og:description",
-        content: "Independent digital products from a small Norwegian builder studio.",
+        content:
+          "Independent digital products from a small Norwegian builder studio.",
       },
     ],
   }),
@@ -51,7 +55,11 @@ function Index() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.9,
+                delay: 0.15,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="flex flex-col justify-end md:col-span-4"
             >
               <p className="text-base leading-relaxed text-foreground/75 sm:text-lg">

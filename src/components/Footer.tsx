@@ -13,7 +13,9 @@ export function Footer() {
           <a href="mailto:hakon@vestverk.no" className="hover:text-foreground">
             hakon@vestverk.no
           </a>
-          <span className="text-foreground/50">© {year} — {t("footer.rights")}</span>
+          <span className="text-foreground/50">
+            © {year} — {t("footer.rights")}
+          </span>
           <span className="flex items-center gap-3 pl-1">
             <a
               href="https://github.com/Pilvik1"

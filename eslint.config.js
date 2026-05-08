@@ -32,8 +32,17 @@ export default tseslint.config(
           ],
         },
       ],
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
       "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
+  {
+    files: ["src/components/ProjectCard.tsx", "src/lib/i18n.tsx"],
+    rules: {
+      "react-refresh/only-export-components": "off",
     },
   },
   eslintPluginPrettier,

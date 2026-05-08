@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
 
 export type Lang = "en" | "no";
 
@@ -10,11 +16,13 @@ const en: Dict = {
   "nav.contact": "Contact",
 
   "hero.headline": "Building focused digital ventures.",
-  "hero.support": "Vestverk creates and publishes independent digital products.",
+  "hero.support":
+    "Vestverk creates and publishes independent digital products.",
   "hero.scroll": "Scroll to projects",
 
   "projects.title": "Projects",
-  "projects.intro": "A small set of independent digital products, built and operated in-house.",
+  "projects.intro":
+    "A small set of independent digital products, built and operated in-house.",
 
   "status.active": "Active",
   "status.inProgress": "In progress",
@@ -36,11 +44,10 @@ const en: Dict = {
     "Vestverk is a small builder studio based in Norway. We create focused digital products with long-term intent.",
 
   "contact.title": "Contact",
-  "contact.body":
-    "Got an idea? Reach out.",
+  "contact.body": "Got an idea? Reach out.",
 
   "footer.rights": "All rights reserved.",
-  "visit": "Visit",
+  visit: "Visit",
 };
 
 const no: Dict = {
@@ -49,7 +56,8 @@ const no: Dict = {
   "nav.contact": "Kontakt",
 
   "hero.headline": "Bygger fokuserte digitale satsinger.",
-  "hero.support": "Vestverk lager og publiserer selvstendige digitale produkter.",
+  "hero.support":
+    "Vestverk lager og publiserer selvstendige digitale produkter.",
   "hero.scroll": "Bla til prosjekter",
 
   "projects.title": "Prosjekter",
@@ -76,17 +84,20 @@ const no: Dict = {
     "Vestverk er et lite byggerstudio basert i Norge. Vi lager fokuserte digitale produkter med langsiktig intensjon.",
 
   "contact.title": "Kontakt",
-  "contact.body":
-    "Har du en idé? Ta kontakt.",
+  "contact.body": "Har du en idé? Ta kontakt.",
 
   "footer.rights": "Alle rettigheter forbeholdt.",
-  "visit": "Besøk",
+  visit: "Besøk",
 };
 
 const dicts: Record<Lang, Dict> = { en, no };
 
 type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string };
-const LangCtx = createContext<Ctx>({ lang: "en", setLang: () => {}, t: (k) => k });
+const LangCtx = createContext<Ctx>({
+  lang: "en",
+  setLang: () => {},
+  t: (k) => k,
+});
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
@@ -95,17 +106,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     try {
       const saved = localStorage.getItem("vestverk-lang") as Lang | null;
       if (saved === "en" || saved === "no") setLangState(saved);
-    } catch {}
+    } catch {
+      // Local storage can be unavailable in private or restricted browser contexts.
+    }
   }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    try { localStorage.setItem("vestverk-lang", l); } catch {}
+    try {
+      localStorage.setItem("vestverk-lang", l);
+    } catch {
+      // Language selection is non-critical if local storage is unavailable.
+    }
   };
 
   const t = (k: string) => dicts[lang][k] ?? dicts.en[k] ?? k;
 
-  return <LangCtx.Provider value={{ lang, setLang, t }}>{children}</LangCtx.Provider>;
+  return (
+    <LangCtx.Provider value={{ lang, setLang, t }}>{children}</LangCtx.Provider>
+  );
 }
 
 export const useLang = () => useContext(LangCtx);

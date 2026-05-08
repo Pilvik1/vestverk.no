@@ -13,15 +13,26 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <GlassPanel className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <Link to="/" className="font-display text-xl tracking-tight text-foreground">
+        <Link
+          to="/"
+          className="font-display text-xl tracking-tight text-foreground"
+        >
           Vestverk
         </Link>
 
         <nav className="hidden items-center gap-7 sm:flex">
-          <Link to="/projects" className={navLink} activeProps={{ className: cn(navLink, activeLink) }}>
+          <Link
+            to="/projects"
+            className={navLink}
+            activeProps={{ className: cn(navLink, activeLink) }}
+          >
             {t("nav.projects")}
           </Link>
-          <Link to="/contact" className={navLink} activeProps={{ className: cn(navLink, activeLink) }}>
+          <Link
+            to="/contact"
+            className={navLink}
+            activeProps={{ className: cn(navLink, activeLink) }}
+          >
             {t("nav.contact")}
           </Link>
         </nav>
@@ -31,7 +42,9 @@ export function Header() {
             onClick={() => setLang("en")}
             className={cn(
               "rounded-full px-2.5 py-1 transition-colors",
-              lang === "en" ? "bg-white/15 text-foreground" : "text-foreground/60 hover:text-foreground"
+              lang === "en"
+                ? "bg-white/15 text-foreground"
+                : "text-foreground/60 hover:text-foreground",
             )}
             aria-pressed={lang === "en"}
           >
@@ -41,7 +54,9 @@ export function Header() {
             onClick={() => setLang("no")}
             className={cn(
               "rounded-full px-2.5 py-1 transition-colors",
-              lang === "no" ? "bg-white/15 text-foreground" : "text-foreground/60 hover:text-foreground"
+              lang === "no"
+                ? "bg-white/15 text-foreground"
+                : "text-foreground/60 hover:text-foreground",
             )}
             aria-pressed={lang === "no"}
           >

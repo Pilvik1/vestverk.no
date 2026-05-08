@@ -13,11 +13,11 @@ export const GlassPanel = forwardRef<HTMLDivElement, GlassPanelProps>(
         className={cn(
           "glass-panel",
           variant === "strong" && "glass-panel-strong",
-          className
+          className,
         )}
         {...props}
       />
     );
-  }
+  },
 );
 GlassPanel.displayName = "GlassPanel";

@@ -12,7 +12,13 @@ export interface Project {
   featured?: boolean;
 }
 
-export function ProjectCard({ project, index }: { project: Project; index: number }) {
+export function ProjectCard({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) {
   const { t } = useLang();
   const isLink = !!project.url;
 
@@ -25,17 +31,17 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
               "inline-block h-1.5 w-1.5 rounded-full",
               project.status === "active"
                 ? "bg-[oklch(0.85_0.16_150)]"
-                : "bg-[oklch(0.8_0.12_80)]"
+                : "bg-[oklch(0.8_0.12_80)]",
             )}
           />
           <span className="text-xs uppercase tracking-[0.18em] text-foreground/60">
-            {project.status === "active" ? t("status.active") : t("status.inProgress")}
+            {project.status === "active"
+              ? t("status.active")
+              : t("status.inProgress")}
           </span>
         </div>
         {isLink && (
-          <ArrowUpRight
-            className="h-5 w-5 text-foreground/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
-          />
+          <ArrowUpRight className="h-5 w-5 text-foreground/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
         )}
       </div>
 
@@ -59,7 +65,11 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.06,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {isLink ? (
         <a
@@ -78,10 +88,42 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
 }
 
 export const PROJECTS: Project[] = [
-  { name: "Vetted", status: "active", url: "https://usevetted.app/", descKey: "p.vetted.desc", featured: true },
-  { name: "felgen.app", status: "active", url: "https://felgen.app/", descKey: "p.felgen.desc" },
-  { name: "verin.no", status: "active", url: "https://verin.no/", descKey: "p.verin.desc" },
-  { name: "Regwatch", status: "in-progress", url: null, descKey: "p.regwatch.desc" },
-  { name: "HelVed", status: "in-progress", url: null, descKey: "p.helved.desc" },
-  { name: "GradPilot", status: "in-progress", url: null, descKey: "p.gradpilot.desc", featured: true },
+  {
+    name: "Vetted",
+    status: "active",
+    url: "https://usevetted.app/",
+    descKey: "p.vetted.desc",
+    featured: true,
+  },
+  {
+    name: "felgen.app",
+    status: "active",
+    url: "https://felgen.app/",
+    descKey: "p.felgen.desc",
+  },
+  {
+    name: "verin.no",
+    status: "active",
+    url: "https://verin.no/",
+    descKey: "p.verin.desc",
+  },
+  {
+    name: "Regwatch",
+    status: "in-progress",
+    url: null,
+    descKey: "p.regwatch.desc",
+  },
+  {
+    name: "HelVed",
+    status: "in-progress",
+    url: null,
+    descKey: "p.helved.desc",
+  },
+  {
+    name: "GradPilot",
+    status: "in-progress",
+    url: null,
+    descKey: "p.gradpilot.desc",
+    featured: true,
+  },
 ];
