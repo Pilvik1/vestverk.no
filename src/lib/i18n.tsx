@@ -37,7 +37,7 @@ const en: Dict = {
 
   "contact.title": "Contact",
   "contact.body":
-    "Open to thoughtful collaborations on focused digital products, automation, and technical systems.",
+    "Got an idea? Reach out.",
 
   "footer.rights": "All rights reserved.",
   "visit": "Visit",
@@ -77,7 +77,7 @@ const no: Dict = {
 
   "contact.title": "Kontakt",
   "contact.body":
-    "Åpen for gjennomtenkte samarbeid om fokuserte digitale produkter, automatisering og tekniske systemer.",
+    "Har du en idé? Ta kontakt.",
 
   "footer.rights": "Alle rettigheter forbeholdt.",
   "visit": "Besøk",
