@@ -21,9 +21,6 @@ export function Header() {
           <Link to="/projects" className={navLink} activeProps={{ className: cn(navLink, activeLink) }}>
             {t("nav.projects")}
           </Link>
-          <Link to="/about" className={navLink} activeProps={{ className: cn(navLink, activeLink) }}>
-            {t("nav.about")}
-          </Link>
           <Link to="/contact" className={navLink} activeProps={{ className: cn(navLink, activeLink) }}>
             {t("nav.contact")}
           </Link>
