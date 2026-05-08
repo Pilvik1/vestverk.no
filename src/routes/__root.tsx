@@ -97,6 +97,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "twitter:description",
           content: "Building focused digital ventures from Norway.",
         },
+        { property: "og:title", content: "Vestverk — Independent digital builder studio" },
+        { name: "twitter:title", content: "Vestverk — Independent digital builder studio" },
+        { name: "description", content: "Got an idea? Reach out." },
+        { property: "og:description", content: "Got an idea? Reach out." },
+        { name: "twitter:description", content: "Got an idea? Reach out." },
+        { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RZpbwQi0kENhGcjHlwVCTzJ0Fkm2/social-images/social-1778228190777-v_small.webp" },
+        { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RZpbwQi0kENhGcjHlwVCTzJ0Fkm2/social-images/social-1778228190777-v_small.webp" },
       ],
       links: [
         { rel: "stylesheet", href: appCss },
