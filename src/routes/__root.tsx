@@ -78,6 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Vestverk — Independent digital builder studio" },
+      { name: "description", content: "Vestverk_v2 is a modern digital studio website showcasing independent digital products." },
+      { property: "og:description", content: "Vestverk_v2 is a modern digital studio website showcasing independent digital products." },
+      { name: "twitter:description", content: "Vestverk_v2 is a modern digital studio website showcasing independent digital products." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RZpbwQi0kENhGcjHlwVCTzJ0Fkm2/social-images/social-1778222897393-v_small.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RZpbwQi0kENhGcjHlwVCTzJ0Fkm2/social-images/social-1778222897393-v_small.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
