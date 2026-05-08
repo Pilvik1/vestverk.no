@@ -82,9 +82,14 @@ function Index() {
             {t("nav.projects")} →
           </Link>
         </div>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-6">
           {PROJECTS.map((p, i) => (
-            <ProjectCard key={p.name} project={p} index={i} />
+            <div
+              key={p.name}
+              className={p.featured ? "md:col-span-4" : "md:col-span-2"}
+            >
+              <ProjectCard project={p} index={i} />
+            </div>
           ))}
         </div>
       </section>
