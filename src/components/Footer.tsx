@@ -1,3 +1,4 @@
+import { Github, Linkedin } from "lucide-react";
 import { GlassPanel } from "./GlassPanel";
 import { useLang } from "@/lib/i18n";
 
@@ -13,6 +14,26 @@ export function Footer() {
             hakon@vestverk.no
           </a>
           <span className="text-foreground/50">© {year} — {t("footer.rights")}</span>
+          <span className="flex items-center gap-3 pl-1">
+            <a
+              href="https://github.com/Pilvik1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="text-foreground/40 transition-colors hover:text-foreground/80"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hakonpilvik/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-foreground/40 transition-colors hover:text-foreground/80"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+          </span>
         </div>
       </GlassPanel>
     </footer>

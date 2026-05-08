@@ -27,13 +27,17 @@ const en: Dict = {
     "Fast, confidential analysis of Norwegian employment contracts. Detect deviations from standard practice.",
   "p.regwatch.desc":
     "Early warnings when Norwegian laws, regulations, or EU sanctions change. Simple alerts with direct source links.",
+  "p.helved.desc":
+    "Intelligent company research for Norway. Understand suppliers, customers, and counterparties beyond traditional credit checks.",
+  "p.gradpilot.desc": "Graduate job applications streamlined.",
 
   "about.title": "About",
   "about.body":
     "Vestverk is a small builder studio based in Norway. We create focused digital products with long-term intent.",
 
   "contact.title": "Contact",
-  "contact.body": "For inquiries, reach out by email.",
+  "contact.body":
+    "Open to thoughtful collaborations on focused digital products, automation, and technical systems.",
 
   "footer.rights": "All rights reserved.",
   "visit": "Visit",
@@ -63,13 +67,17 @@ const no: Dict = {
     "Rask, konfidensiell analyse av norske arbeidskontrakter. Oppdag avvik fra standard praksis.",
   "p.regwatch.desc":
     "Tidlige varsler når norske lover, forskrifter eller EU-sanksjoner endres. Enkle varsler med direkte kildelenker.",
+  "p.helved.desc":
+    "Intelligent selskapsanalyse for Norge. Forstå leverandører, kunder og motparter utover tradisjonelle kredittsjekker.",
+  "p.gradpilot.desc": "Strømlinjeformede jobbsøknader for nyutdannede.",
 
   "about.title": "Om",
   "about.body":
     "Vestverk er et lite byggerstudio basert i Norge. Vi lager fokuserte digitale produkter med langsiktig intensjon.",
 
   "contact.title": "Kontakt",
-  "contact.body": "For henvendelser, ta kontakt på e-post.",
+  "contact.body":
+    "Åpen for gjennomtenkte samarbeid om fokuserte digitale produkter, automatisering og tekniske systemer.",
 
   "footer.rights": "Alle rettigheter forbeholdt.",
   "visit": "Besøk",

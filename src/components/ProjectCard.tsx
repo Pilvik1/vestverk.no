@@ -9,6 +9,7 @@ export interface Project {
   status: "active" | "in-progress";
   url: string | null;
   descKey: string;
+  featured?: boolean;
 }
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -77,8 +78,10 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
 }
 
 export const PROJECTS: Project[] = [
-  { name: "Vetted", status: "active", url: "https://usevetted.app/", descKey: "p.vetted.desc" },
+  { name: "Vetted", status: "active", url: "https://usevetted.app/", descKey: "p.vetted.desc", featured: true },
   { name: "felgen.app", status: "active", url: "https://felgen.app/", descKey: "p.felgen.desc" },
   { name: "verin.no", status: "active", url: "https://verin.no/", descKey: "p.verin.desc" },
   { name: "Regwatch", status: "in-progress", url: null, descKey: "p.regwatch.desc" },
+  { name: "HelVed", status: "in-progress", url: null, descKey: "p.helved.desc" },
+  { name: "GradPilot", status: "in-progress", url: null, descKey: "p.gradpilot.desc", featured: true },
 ];
